@@ -1,0 +1,64 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Exports\DaftarOnlineExport;
+use App\Models\DaftarOnline;
+use Carbon\Carbon;
+use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
+use RealRashid\SweetAlert\Facades\Alert;
+
+class AdminDaftarOnline extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $data =[
+            'title' => 'Manajemen DaftarOnline',
+            'daftar_online' => DaftarOnline::get(),
+            'content' => 'admin/daftar_online/index'
+        ];
+        return view ('operator.daftar_online.index', $data );
+    }
+
+    public function show ($id)
+    {
+    $data = [
+        'daftar_online' => DaftarOnline::find($id),
+        'content'=> 'admin/daftar_online/show'
+    ];
+    return view('operator.daftar_online.show',$data);
+    }
+
+        public function destroy($id)
+    {
+        $daftar_online = DaftarOnline::find ($id);
+
+
+            if($daftar_online->gambar != null){
+            unlink($daftar_online->gambar);
+                }
+
+                if($daftar_online->file != null){
+            unlink($daftar_online->file);
+                }
+        Alert::success('sukses', 'data berhasil dihapus');
+        $daftar_online->delete();
+        return redirect ('/admin/daftar_online');
+        
+    }
+
+
+    
+    //     public function export() 
+    // {
+    //     return Excel::download(new DaftarOnlineExport ,'daftar_online-'.Carbon::now()->timestamp. '.xlsx');
+    // }
+
+
+}
