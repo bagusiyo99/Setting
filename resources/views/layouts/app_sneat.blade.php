@@ -170,15 +170,10 @@
                         </a>
                     </li>
 
-                    <li class="menu-item {{ \Route::is('setting.*') ? 'active' : '' }}">
-                        <a href="{{ route('setting.create') }}" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-collection"></i>
-                            <div data-i18n="Basic">Data setting</div>
-                        </a>
-                    </li>
 
-                    <li class="menu-item {{ \Route::is('about.*') ? 'active' : '' }}">
-                        <a href="{{ route('about.index') }}" class="menu-link">
+
+                    <li class="menu-item {{ \Route::is('setting.*') ? 'active' : '' }}">
+                        <a href="{{ route('setting.index') }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-collection"></i>
                             <div data-i18n="Basic">Data Setting Home</div>
                         </a>
@@ -235,13 +230,6 @@
                         </a>
                     </li>
 
-                    <li class="menu-item {{ \Route::is('guru.*') ? 'active' : '' }}">
-                        <a href="{{ route('guru.index') }}" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-collection"></i>
-                            <div data-i18n="Basic">Data Guru</div>
-                        </a>
-                    </li>
-
 
                     <li class="menu-item {{ \Route::is('blog.*') ? 'active' : '' }}">
                         <a href="{{ route('blog.index') }}" class="menu-link">
@@ -251,18 +239,26 @@
                     </li>
 
 
-
-                    <li class="menu-item {{ \Route::is('foto.*') ? 'active' : '' }}">
-                        <a href="{{ route('foto.index') }}" class="menu-link">
+                    <li class="menu-item {{ \Route::is('pemesanan.*') ? 'active' : '' }}">
+                        <a href="{{ route('pemesanan.index') }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-collection"></i>
-                            <div data-i18n="Basic">Data Galeri</div>
+                            <div data-i18n="Basic">Data pemesanan</div>
                         </a>
                     </li>
 
-                    <li class="menu-item {{ \Route::is('pesan.*') ? 'active' : '' }}">
-                        <a href="{{ route('pesan.index') }}" class="menu-link">
+
+                    <li class="menu-item {{ \Route::is('jasa.*') ? 'active' : '' }}">
+                        <a href="{{ route('jasa.index') }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-collection"></i>
-                            <div data-i18n="Basic">Data Pesan</div>
+                            <div data-i18n="Basic">Data jasa</div>
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item {{ \Route::is('portofolio.*') ? 'active' : '' }}">
+                        <a href="{{ route('portofolio.index') }}" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-collection"></i>
+                            <div data-i18n="Basic">Data portofolio</div>
                         </a>
                     </li>
 
@@ -274,34 +270,7 @@
                     </li>
 
 
-                    <li class="menu-item {{ \Route::is('informasi.*') ? 'active' : '' }}">
-                        <a href="{{ route('informasi.index') }}" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-collection"></i>
-                            <div data-i18n="Basic">Data Informasi</div>
-                        </a>
-                    </li>
 
-                    <li class="menu-item {{ \Route::is('formulir.*') ? 'active' : '' }}">
-                        <a href="{{ route('formulir.index') }}" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-collection"></i>
-                            <div data-i18n="Basic">Data Formulir</div>
-                        </a>
-                    </li>
-
-
-                    <li class="menu-item {{ \Route::is('daftar_online.*') ? 'active' : '' }}">
-                        <a href="{{ route('daftar_online.index') }}" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-collection"></i>
-                            <div data-i18n="Basic">Data Pendaftaran Siswa</div>
-                        </a>
-                    </li>
-
-                    <li class="menu-item {{ \Route::is('pendaftaran.*') ? 'active' : '' }}">
-                        <a href="{{ route('pendaftaran.index') }}" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-collection"></i>
-                            <div data-i18n="Basic">Data Pendaftaran Siswa</div>
-                        </a>
-                    </li>
 
 
 
@@ -319,26 +288,7 @@
                         </a>
 
                         <ul class="menu-sub">
-                            <li class="menu-item {{ \Route::is('guru.*') ? 'active' : '' }}">
-                                <a href="{{ route('guru.index') }}" class="menu-link">
-                                    {{-- <i class="menu-icon tf-icons bx bx-collection"></i> --}}
-                                    <div data-i18n="Basic">Data guru </div>
-                                </a>
-                            </li>
 
-                            <li class="menu-item {{ \Route::is('jurusan.*') ? 'active' : '' }}">
-                                <a href="{{ route('jurusan.index') }}" class="menu-link">
-                                    {{-- <i class="menu-icon tf-icons bx bx-collection"></i> --}}
-                                    <div data-i18n="Basic">Data Jurusan </div>
-                                </a>
-                            </li>
-
-                            <li class="menu-item {{ \Route::is('kepsek.*') ? 'active' : '' }}">
-                                <a href="{{ route('kepsek.index') }}" class="menu-link">
-                                    {{-- <i class="menu-icon tf-icons bx bx-collection"></i> --}}
-                                    <div data-i18n="Basic">Data 5 Teratas </div>
-                                </a>
-                            </li>
 
                             <li class="menu-item">
                                 <a href="layouts-without-navbar.html" class="menu-link">

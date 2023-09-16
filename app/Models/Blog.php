@@ -9,4 +9,10 @@ class Blog extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+            public function komentar()
+    {
+        return $this->hasMany(Komen::class);
+    }
+
 }
