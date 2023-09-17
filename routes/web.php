@@ -5,22 +5,23 @@ use App\Http\Controllers\home\Home;
 use Illuminate\Support\Facades\Route;
 
 
+use App\Http\Controllers\home\HomeJasa;
 use App\Http\Controllers\admin\AdminBlog;
 use App\Http\Controllers\admin\AdminJasa;
 use App\Http\Controllers\admin\AdminKomen;
+
+
+
 use App\Http\Controllers\admin\AdminBanner;
-
-
-
-use App\Http\Controllers\admin\AdminSetting;
 use App\Http\Controllers\home\HomePemesanan;
+use App\Http\Controllers\home\HomePortofolio;
 use App\Http\Controllers\admin\AdminPemesanan;
 use App\Http\Controllers\home\komenController;
+use App\Http\Controllers\admin\AdminPengaturan;
 use App\Http\Controllers\admin\AdminPortofolio;
 use App\Http\Controllers\home\HomeBlogController;
 use App\Http\Controllers\admin\BerandaOperatorController;
-use App\Http\Controllers\home\HomeJasa;
-use App\Http\Controllers\home\HomePortofolio;
+use App\Http\Controllers\SettingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -113,12 +114,12 @@ Route::prefix('operator')->middleware(['auth', 'auth.operator'])->group(function
     Route::get('beranda', [BerandaOperatorController::class, 'index'])->name('operator.beranda');
 
 
-        Route::get('/setting', [AdminSetting::class, 'index'])->name('setting.index');
-        Route::put('/setting/update', [AdminSetting::class, 'update'])->name('setting.update');
+        Route::get('/pengaturan', [AdminPengaturan::class, 'index'])->name('pengaturan.index');
+        Route::put('/pengaturan/update', [AdminPengaturan::class, 'update'])->name('pengaturan.update');
 
 
 
-
+    Route::resource('setting', SettingController::class);
     Route::resource('/pemesanan', AdminPemesanan::class);
     Route::resource('/komen', AdminKomen::class);
     Route::resource('/jasa', AdminJasa::class);

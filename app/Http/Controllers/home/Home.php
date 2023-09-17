@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 
 use App\Models\Banner;
 use App\Models\Blog;
-
+use App\Models\Pengaturan;
 use App\Models\Setting;
 
 use Illuminate\Http\Request;
@@ -15,7 +15,7 @@ class Home extends Controller
 {
     function index (){
     $data = [
-        'setting' => Setting::get(),
+        'pengaturan' => Pengaturan::get(),
         'blog' => Blog::paginate(4),
         // 'informasi' => Informasi::paginate(4),
         'banner' => Banner::get(),

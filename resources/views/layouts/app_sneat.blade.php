@@ -8,7 +8,7 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>{!! $global_setting->judul !!}</title>
+    <title>{!! settings()->get('app_name') !!}</title>
     {{-- <title>{{ config('app.name', 'Laravel') }}</title> --}}
 
 
@@ -24,7 +24,7 @@
 
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/{!! $global_setting->logo !!}" />
+    <link rel="icon" type="image/x-icon" href="" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -86,8 +86,8 @@
                 <div class="app-brand demo">
                     <a href="index.html" class="app-brand-link">
 
-                        {{-- <img src="/{{ settings()->get('foto') }}" width="30px"> --}}
-                        <img src="/{!! $global_setting->logo !!}" width="30px">
+                        <img src="/{{ settings()->get('foto') }}" width="30px">
+                        {{-- <img src="" width="30px"> --}}
 
                         {{-- <span class="app-brand-logo demo">
                 <svg
@@ -145,13 +145,13 @@
                 </svg>
               </span> --}}
 
-                        <span class="app-brand-text demo menu-text fw-bolder ms-2 text-uppercase">
+                        {{-- <span class="app-brand-text demo menu-text fw-bolder ms-2 text-uppercase">
                             {!! $global_setting->judul !!}
-                        </span>
-
-                        {{-- <span
-                            class="app-brand-text demo menu-text fw-bolder ms-2 text-uppercase">{!! settings()->get('app_name') !!}
                         </span> --}}
+
+                        <span
+                            class="app-brand-text demo menu-text fw-bolder ms-2 text-uppercase">{!! settings()->get('app_name') !!}
+                        </span>
                     </a>
 
                     <a href="javascript:void(0);"
@@ -174,9 +174,16 @@
 
 
                     <li class="menu-item {{ \Route::is('setting.*') ? 'active' : '' }}">
-                        <a href="{{ route('setting.index') }}" class="menu-link">
+                        <a href="{{ route('setting.create') }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-collection"></i>
-                            <div data-i18n="Basic">Data Setting Home</div>
+                            <div data-i18n="Basic">Data setting</div>
+                        </a>
+                    </li>
+
+                    <li class="menu-item {{ \Route::is('pengaturan.*') ? 'active' : '' }}">
+                        <a href="{{ route('pengaturan.index') }}" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-collection"></i>
+                            <div data-i18n="Basic">Data setting Home</div>
                         </a>
                     </li>
 
@@ -418,8 +425,7 @@
                                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
                                     data-bs-toggle="dropdown">
                                     <div class="avatar avatar-online">
-                                        <img src="/{!! $global_setting->logo !!}" alt
-                                            class="w-px-40 h-auto rounded-circle" />
+                                        <img src="" alt class="w-px-40 h-auto rounded-circle" />
                                     </div>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end">
@@ -428,7 +434,7 @@
                                             <div class="d-flex">
                                                 <div class="flex-shrink-0 me-3">
                                                     <div class="avatar avatar-online">
-                                                        <img src="/{!! $global_setting->logo !!}" alt
+                                                        <img src="" alt
                                                             class="w-px-40 h-auto rounded-circle" />
                                                     </div>
                                                 </div>

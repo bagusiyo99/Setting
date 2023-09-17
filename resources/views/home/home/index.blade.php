@@ -91,7 +91,7 @@
 
 
 <section class="info ">
-    @foreach ($setting as $item)
+    @foreach ($pengaturan as $item)
         <div class="main-info mt-5">
             <img src="/{{ $item->gambar }}" data-aos="fade-right" data-aos-offset="500" data-aos-easing="ease-in-sine">
             <div class="tulis" data-aos="fade-left" data-aos-offset="500" data-aos-easing="ease-in-sine">

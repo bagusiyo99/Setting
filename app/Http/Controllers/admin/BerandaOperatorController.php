@@ -2,9 +2,10 @@
 
 /// dua komponen jika di buat folder
 namespace App\Http\Controllers\admin;
-use App\Http\Controllers\Controller;
+use App\Models\Pengaturan;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class BerandaOperatorController extends Controller
     
@@ -14,8 +15,15 @@ class BerandaOperatorController extends Controller
     ){
 
     
+$data = [
+        'pengaturan' => Pengaturan::get(),
+        
 
-        return view('operator.beranda_index');
+
+
+        'content'=> 'operator/index'
+    ];
+        return view('operator.beranda_index', $data);
 
 
 
