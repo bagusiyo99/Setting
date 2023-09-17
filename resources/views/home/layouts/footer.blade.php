@@ -4,7 +4,7 @@
              <div class="row justify-content-between">
                  <div class="col-lg-4 col-md-6 footer-widget footer-about">
                      <h3 class="widget-title">About Us</h3>
-                     <img loading="lazy" class="footer-logo" src="/{!! $global_setting->logo !!}" alt="Projectyai">
+                     <img loading="lazy" class="footer-logo" src="/{{ settings()->get('foto') }} " alt="Projectyai">
                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inci done idunt
                          ut
                          labore et dolore magna aliqua.</p>
@@ -107,7 +107,7 @@
 
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
      integrity="sha384-   
-                                                                                                                                                                                                                                                                                            MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                                                                                                                                                                                                                                                                                              MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
      crossorigin="anonymous"></script>
 
 

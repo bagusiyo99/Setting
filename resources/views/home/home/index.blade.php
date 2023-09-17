@@ -123,7 +123,7 @@
             </div><!-- Col end -->
             <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-left" data-aos-offset="500"
                 data-aos-easing="ease-in-sine">
-                @foreach ($setting as $item)
+                @foreach ($pengaturan as $item)
                     <h3 class="into-sub-title">Visi dan Misi</h3>
                     <p>Berikut ini visi dan misi sekolah kami</p>
                     <div class="accordion accordion-group" id="our-values-accordion">
@@ -140,7 +140,7 @@
                             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
                                 data-parent="#our-values-accordion">
                                 <div class="card-body">
-                                    {{-- {{ 1settings()->get('app_visi') }} --}} {!! $item->visi !!}
+                                    {{-- {{ 1pengaturans()->get('app_visi') }} --}} {!! $item->visi !!}
                                 </div>
                             </div>
                         </div>

@@ -383,9 +383,10 @@
                                                 <a href="">
                                                     <div class="d-flex">
                                                         <div class="flex-grow-1">
-                                                            <h6 class="mb-1"> g</h6>
+                                                            <h6 class="mb-1"> {{ settings()->get('app_name') }}</h6>
                                                             <p class="mb-0"> g</p>
-                                                            <small class="text-muted">ddd</small>
+                                                            <small
+                                                                class="text-muted">{{ settings()->get('app_name') }}</small>
                                                         </div>
                                                         <div class="flex-shrink-0 dropdown-notifications-actions">
                                                             <a href="javascript:void(0)"
@@ -425,7 +426,8 @@
                                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
                                     data-bs-toggle="dropdown">
                                     <div class="avatar avatar-online">
-                                        <img src="" alt class="w-px-40 h-auto rounded-circle" />
+                                        <img src="/{{ settings()->get('foto') }}" alt
+                                            class="w-px-40 h-auto rounded-circle" />
                                     </div>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end">
@@ -434,7 +436,7 @@
                                             <div class="d-flex">
                                                 <div class="flex-shrink-0 me-3">
                                                     <div class="avatar avatar-online">
-                                                        <img src="" alt
+                                                        <img src="/{{ settings()->get('foto') }}" alt
                                                             class="w-px-40 h-auto rounded-circle" />
                                                     </div>
                                                 </div>

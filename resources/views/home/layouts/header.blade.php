@@ -49,7 +49,7 @@
                 <div class="row align-items-center">
                     <div class="logo col-lg-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
                         <a class="d-block" href="index.html">
-                            <img loading="lazy" src="/{!! $pengaturan->logo !!}" alt="Constra">
+                            <img loading="lazy" src="/{{ settings()->get('foto') }}" alt="Constra">
                         </a>
                     </div><!-- logo end -->
 

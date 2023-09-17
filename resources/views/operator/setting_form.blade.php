@@ -1,54 +1,50 @@
-{{-- 109 tutor --}}
 @extends('layouts.app_sneat')
 
 @section('content')
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <h5 class="card-header">Pengaturan </h5>
+                <div class="card-header">
+                    <h5>Pengaturan</h5>
+                </div>
 
                 <div class="card-body">
+                    <form action="{{ route('setting.store') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
 
-                    {!! Form::open(['route' => 'setting.store', 'method' => 'POST', 'files' => true]) !!}
+                        <div class="form-group">
+                            <div class="mt-3">
+                                <label for="app_name">Nama Instansi</label>
+                                <input type="text" name="app_name" class="form-control"
+                                    value="{{ settings()->get('app_name') }}" autofocus>
+                                @error('app_name')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
 
+                            <div class="mt-3">
+                                <label for="gambar">Kepala Sekolah (Format: jpg, jpeg, png, Ukuran Maks: 3MB)</label>
+                                <input type="file" name="gambar" class="form-control">
+                                @error('gambar')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
+                                <img src="/{{ settings()->get('gambar') }}" width="300px">
+                            </div>
 
+                            <div class="mt-3">
+                                <label for="foto">Logo (Format: jpg, jpeg, png, Ukuran Maks: 3MB)</label>
+                                <input type="file" name="foto" class="form-control">
+                                @error('foto')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
+                                <img src="/{{ settings()->get('foto') }}" width="300px">
+                            </div>
 
-                    <div class="form-group">
-
-                        <div class="form-group mt-3">
-                            <label for="app_name">Nama Instansi</label>
-                            {!! Form::text('app_name', settings()->get('app_name'), ['class' => 'form-control', 'autofocus']) !!}
-                            <span class="text-danger">{{ $errors->first('app_name') }}</span>
+                            <button type="submit" class="btn btn-primary mt-5">UPDATE</button>
                         </div>
-
-                        <div class="form-group mt-3">
-                            <label for="gambar">Kepala Sekolah <b>(Format:jpg, jpeg, png, Ukuran Maks : 3MB)</b></label>
-                            {!! Form::file('gambar', ['class' => 'form-control']) !!}
-                            <span class="text-danger">{{ $errors->first('gambar') }}</span>
-                            <img src="/{{ settings()->get('gambar') }}" width="300px">
-                            {{-- <img src="{{ \Storage::url(settings()->get('gambar')) }}" width="300px"> --}}
-
-                        </div>
-
-                        <div class="form-group mt-3">
-                            <label for="foto">Logo <b>(Format:jpg, jpeg, png, Ukuran Maks : 3MB)</b></label>
-                            {!! Form::file('foto', ['class' => 'form-control']) !!}
-                            <span class="text-danger">{{ $errors->first('foto') }}</span>
-                            <img src="/{{ settings()->get('foto') }}" width="300px">
-                            {{-- <img src="{{ \Storage::url(settings()->get('foto')) }}" width="300px"> --}}
-
-                        </div>
-
-                        {!! Form::submit('UPDATE', ['class' => 'btn btn-primary mt-5']) !!}
-
-
-
-
-
-
-                        {!! Form::close() !!}
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
-    @endsection
+    </div>
+@endsection

@@ -7,11 +7,11 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
-    <title> {!! $pengaturan->judul !!} </title>
+    <title>{{ settings()->get('app_name') }}</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer-navbar/">
 
-    <link rel="icon" href="/{!! $pengaturan->logo !!} ">
+    <link rel="icon" href="/{{ settings()->get('foto') }} ">
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
