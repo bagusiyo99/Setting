@@ -27,13 +27,13 @@ class DatabaseSeeder extends Seeder
 
         // \App\Models\User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'admin', 
-            'email' => 'admin@gmail.com', 
-            'akses' => 'operator', 
-            'email_verified_at' => now(),
-            'password' => '$2y$10$sn0xQzfI87OuIWY0Pc4mquMPkCbF2Xqqv4IRWOPr.0LaY7/eZ8exC', // 12345
-        ]);
+        // User::factory()->create([
+        //     'name' => 'admin', 
+        //     'email' => 'admin@gmail.com', 
+        //     'akses' => 'operator', 
+        //     'email_verified_at' => now(),
+        //     'password' => '$2y$10$sn0xQzfI87OuIWY0Pc4mquMPkCbF2Xqqv4IRWOPr.0LaY7/eZ8exC', // 12345
+        // ]);
 
         
         Setting::factory(1)->create([
