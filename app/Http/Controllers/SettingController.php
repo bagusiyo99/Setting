@@ -14,35 +14,57 @@ class SettingController extends Controller
         return view('operator.setting_form');
     }
 
-    public function store  (Request $request)
-    {
-        $dataSettings = $request->except('_token');
+   public function store(Request $request)
+{
+    $dataSettings = $request->except('_token');
 
-            if ($request -> hasFile('foto')) {
-                $foto = $request->file('foto');
-                $file_name = time ().'-'. $foto -> getClientOriginalName ();
+    // Cek apakah ada file foto yang di-upload
+    if ($request->hasFile('foto')) {
+        $foto = $request->file('foto');
+        $file_name = time() . '-' . $foto->getClientOriginalName();
 
-                $storage = 'uploads/logo/';
-                $foto->move ($storage, $file_name);
-                $dataSettings ['foto'] =$storage .$file_name;
-            }else {
-                $dataSettings ['foto'] = null;
+        $storage = 'uploads/logo/';
+        $foto->move($storage, $file_name);
+        $dataSettings['foto'] = $storage . $file_name;
+
+        // Hapus file foto lama jika ada
+        if (!empty(Settings()->get('foto'))) {
+            $oldFotoPath = Settings()->get('foto');
+            if (file_exists($oldFotoPath)) {
+                unlink($oldFotoPath);
             }
-
-            if ($request -> hasFile('gambar')) {
-                $gambar = $request->file('gambar');
-                $file_name = time ().'-'. $gambar -> getClientOriginalName ();
-
-                $storage = 'uploads/logo/';
-                $gambar->move ($storage, $file_name);
-                $dataSettings ['gambar'] =$storage .$file_name;
-            }else {
-                $dataSettings ['gambar'] = null;
-            }
-
-
-        Settings()->set($dataSettings);
-        flash ('Data Berhasil Disimpan');
-        return back();
+        }
+    } else {
+        // Jika tidak ada file foto baru di-upload, gunakan foto lama
+        $dataSettings['foto'] = Settings()->get('foto');
     }
+
+    // Lakukan hal yang sama untuk gambar
+    if ($request->hasFile('gambar')) {
+        $gambar = $request->file('gambar');
+        $file_name = time() . '-' . $gambar->getClientOriginalName();
+
+        $storage = 'uploads/logo/';
+        $gambar->move($storage, $file_name);
+        $dataSettings['gambar'] = $storage . $file_name;
+
+        // Hapus file gambar lama jika ada
+        if (!empty(Settings()->get('gambar'))) {
+            $oldGambarPath = Settings()->get('gambar');
+            if (file_exists($oldGambarPath)) {
+                unlink($oldGambarPath);
+            }
+        }
+    } else {
+        // Jika tidak ada file gambar baru di-upload, gunakan gambar lama
+        $dataSettings['gambar'] = Settings()->get('gambar');
+    }
+
+    Settings()->set($dataSettings);
+    flash('Data Berhasil Disimpan');
+    return back();
+}
+
+
+
 }
