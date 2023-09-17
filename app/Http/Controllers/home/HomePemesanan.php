@@ -28,7 +28,7 @@ class HomePemesanan extends Controller
     {
         $data = $request -> validate ([
             'nama' => 'required',
-            'email' => 'required|email|unique:pesans', // Pastikan email unik dalam tabel 'pesans'
+            'email' => 'required|email|unique:pemesanans', // Pastikan email unik dalam tabel 'pesans'
             'alamat' => 'required',
             'jk' => 'required ',
             'pesan' => 'required ',

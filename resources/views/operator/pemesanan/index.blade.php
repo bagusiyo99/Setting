@@ -25,7 +25,7 @@
                                     <td> {{ $item->email }} </td>
                                     <td> {{ $item->jk }} </td>
 
-                                    <td> {{ $item->pemesanan }} </td>
+                                    <td> {{ $item->pesan }} </td>
 
                                     <td>
                                         <div class="text-center mb-1">

@@ -116,79 +116,21 @@
                                         href="/blog" id="search">Artikel</a>
                                 </li>
 
-                                <li class="nav-item"> <a class="nav-link  {{ Request::is('blog') ? 'active' : '' }}"
-                                        href="/jurusan">Jurusan</a>
+                                <li class="nav-item"> <a class="nav-link  {{ Request::is('jasa') ? 'active' : '' }}"
+                                        href="/jasa">Jasa</a>
                                 </li>
 
-                                {{-- <li class="nav-item"> <a class="nav-link  {{ Request::is('blog') ? 'active' : '' }}"
-                                        href="pendaftaran">Artikel</a>
-                                </li>  --}}
-
-                                <li class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Tentang
-                                        Kami
-                                        <i class="fa fa-angle-down"></i></a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="/about">Sambutan & Sejarah</a></li>
-                                        <li><a href="#">Akreditas</a></li>
-                                        {{-- <li><a href="/blog">Artikel</a></li> --}}
-                                        <li><a href="/login">Prestasi</a></li>
-                                        <li><a href="/daftar_online">Alumni</a></li>
-                                        <li><a href="#">Visi & Misi</a></li>
-                                        <li><a href="/guru">Guru</a></li>
-                                        <li><a href="/kepsek">Pimpinan</a></li>
-
-                                        <li class="dropdown-submenu">
-                                            <a href="#!" class="dropdown-toggle" data-toggle="dropdown">Jurusan
-                                            </a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#!">Child Menu 1</a></li>
-                                                <li><a href="#!">Child Menu 2</a></li>
-                                                <li><a href="#!">Child Menu 3</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
+                                <li class="nav-item"> <a
+                                        class="nav-link  {{ Request::is('portofolio') ? 'active' : '' }}"
+                                        href="/portofolio">Portofolio</a>
                                 </li>
 
-
-
-                                <li class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Galeri
-                                        <i class="fa fa-angle-down"></i></a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="/foto">Foto</a></li>
-                                        <li><a href="projects-single.html">Kontak</a></li>
-                                    </ul>
-                                </li>
-
-                                {{-- <li class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">daftara
-                                        <i class="fa fa-angle-down"></i></a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="/daftar_online">Foto</a></li>
-                                        <li><a href="projects-single.html">daftar</a></li>
-                                    </ul>
-                                </li> --}}
-
-                                <li class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle"
-                                        data-toggle="dropdown">Pendaftaran <i class="fa fa-angle-down"></i></a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li> <a href="/prosedur" class="dropdown-item">Tata Cara Pendaftaran</a>
-                                        </li>
-                                        <li> <a href="/formulir" class="dropdown-item">Formulir</a>
-                                        </li>
-                                        {{-- <li> <a href="/daftar_online" class="dropdown-item">Daftar Ulang</a></li> --}}
-                                        <li> <a href="/pendaftaran" class="dropdown-item"> Pendaftaran</a></li>
-
-                                    </ul>
-                                </li>
 
                                 <li class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Kontak
                                         <i class="fa fa-angle-down"></i></a>
                                     <ul class="dropdown-menu" role="menu">
-                                        <li> <a href="/contact" class="dropdown-item">Kirim Pesan</a>
+                                        <li> <a href="/pemesanan" class="dropdown-item">Kirim Pesan</a>
                                         </li>
                                         <li><a href="/alamat" class="dropdown-item">Alamat</a></li>
                                     </ul>

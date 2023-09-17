@@ -8,7 +8,7 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{!! $global_setting->judul !!}</title>
     {{-- <title>{{ config('app.name', 'Laravel') }}</title> --}}
 
 
@@ -24,7 +24,7 @@
 
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/assets/img/favicon/logo.png" />
+    <link rel="icon" type="image/x-icon" href="/{!! $global_setting->logo !!}" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -87,7 +87,7 @@
                     <a href="index.html" class="app-brand-link">
 
                         {{-- <img src="/{{ settings()->get('foto') }}" width="30px"> --}}
-                        {{-- <img src="/{{ settings()->get('foto') }}" width="30px"> --}}
+                        <img src="/{!! $global_setting->logo !!}" width="30px">
 
                         {{-- <span class="app-brand-logo demo">
                 <svg
@@ -145,7 +145,8 @@
                 </svg>
               </span> --}}
 
-                        <span class="app-brand-text demo menu-text fw-bolder ms-2 text-uppercase"> kkak
+                        <span class="app-brand-text demo menu-text fw-bolder ms-2 text-uppercase">
+                            {!! $global_setting->judul !!}
                         </span>
 
                         {{-- <span
@@ -417,7 +418,7 @@
                                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
                                     data-bs-toggle="dropdown">
                                     <div class="avatar avatar-online">
-                                        <img src="/assets/img/avatars/1.png" alt
+                                        <img src="/{!! $global_setting->logo !!}" alt
                                             class="w-px-40 h-auto rounded-circle" />
                                     </div>
                                 </a>
@@ -427,7 +428,7 @@
                                             <div class="d-flex">
                                                 <div class="flex-shrink-0 me-3">
                                                     <div class="avatar avatar-online">
-                                                        <img src="/assets/img/avatars/1.png" alt
+                                                        <img src="/{!! $global_setting->logo !!}" alt
                                                             class="w-px-40 h-auto rounded-circle" />
                                                     </div>
                                                 </div>
@@ -574,7 +575,6 @@
     <script>
         tinymce.init({
             selector: 'textarea#tiny'
-
         });
     </script>
 

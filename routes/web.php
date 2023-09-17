@@ -3,20 +3,24 @@
 
 use App\Http\Controllers\home\Home;
 use Illuminate\Support\Facades\Route;
+
+
 use App\Http\Controllers\admin\AdminBlog;
 use App\Http\Controllers\admin\AdminJasa;
 use App\Http\Controllers\admin\AdminKomen;
 use App\Http\Controllers\admin\AdminBanner;
+
+
+
 use App\Http\Controllers\admin\AdminSetting;
-
-
-
 use App\Http\Controllers\home\HomePemesanan;
 use App\Http\Controllers\admin\AdminPemesanan;
 use App\Http\Controllers\home\komenController;
 use App\Http\Controllers\admin\AdminPortofolio;
 use App\Http\Controllers\home\HomeBlogController;
 use App\Http\Controllers\admin\BerandaOperatorController;
+use App\Http\Controllers\home\HomeJasa;
+use App\Http\Controllers\home\HomePortofolio;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,16 +38,15 @@ Route::get('/detail/{id}', [Home::class, 'detail'])->name('home.detail');
 Route::get('/informasi/{id}', [Home::class, 'informasi']);
 
 
-Route::get('/portofolio', [HomePortofolio::class, 'index']);
-// Route::get('/show/{id}', [HomePortofolio::class,'detail']);
+Route::get('/portofolio', [HomePortofolio::class, 'index'])->name('portofolio.index');
 Route::get('/portofolio/{id}', [HomePortofolio::class, 'detail'])->name('portofolio.detail');
 
-Route::get('/jasa', [HomeJasa::class, 'index']);
+Route::get('/jasa', [HomeJasa::class, 'index'])->name('jasa.index');
 Route::get('/jasa/{id}', [HomeJasa::class, 'detail'])->name('jasa.detail');
 
 
-Route::get('/pemesanan', [HomePemesanan::class, 'index']);
-Route::post('/pemesanan/send', [HomePemesanan::class, 'send']);
+Route::get('/pemesanan', [HomePemesanan::class, 'index'])->name('pemesanan.index');
+Route::post('/pemesanan/send', [HomePemesanan::class, 'send'])->name('pemesanan.send');
 
 
 
@@ -111,7 +114,7 @@ Route::prefix('operator')->middleware(['auth', 'auth.operator'])->group(function
 
 
         Route::get('/setting', [AdminSetting::class, 'index'])->name('setting.index');
-        Route::put('/setting/update', [AdminSetting::class, 'update']);
+        Route::put('/setting/update', [AdminSetting::class, 'update'])->name('setting.update');
 
 
 

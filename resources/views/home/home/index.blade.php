@@ -321,9 +321,9 @@
                 </div><!-- shuffle end -->
             </div>
 
-            <div class="col-12">
-                <div class="general-btn text-center">
-                    <a class="btn btn-primary" href="projects.html">View All Projects</a>
+            <div class="col-12 mt-5">
+                <div class=" text-center">
+                    <button class="btn btn-primary" href="projects.html">View All Projects</button>
                 </div>
             </div>
 

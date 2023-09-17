@@ -1,6 +1,7 @@
 <?php
-
-namespace App\Http\Controllers;
+/// dua komponen jika di buat folder
+namespace App\Http\Controllers\admin;
+use App\Http\Controllers\Controller;
 
 use App\Models\Komen;
 use Illuminate\Http\Request;

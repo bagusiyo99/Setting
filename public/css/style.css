@@ -129,7 +129,7 @@ a {
 
 a:hover {
     text-decoration: none;
-    color: #000;
+    color: #ffb600;
 }
 
 a.read-more {
@@ -139,7 +139,7 @@ a.read-more {
 }
 
 a.read-more:hover {
-    color: #222;
+    color: #ffb600;
 }
 
 
@@ -661,20 +661,27 @@ ul.top-info li p.info-text {
     list-style: none;
     padding: 0;
     margin: 0;
+    margin-top: 13px;
     margin-right: -12px;
 }
 
 @media (max-width: 767px) {
     .top-social ul {
         margin-right: 0;
+        margin-top: 1px;
         text-align: center;
     }
 
     ul.top-info li p.info-text {
         margin-right: 0;
         text-align: center;
+
+
     }
 
+    .text-md-left {
+        text-align: center !important;
+    }
 }
 
 .top-social ul li {
@@ -3810,30 +3817,31 @@ label {
 }
 
 .btn {
-    min-width: 10rem;
+    min-width: 4rem;
     border-radius: 100px;
 }
 
 .btn-primary {
-    background: var(--accent);
-    color: var(--white);
+    background: rgb(6, 176, 62);
+    color: white;
     padding: 0.6875rem 1.1875rem;
 }
 
 .btn-primary:hover {
-    background: var(--foreground-secondary);
-    color: var(--action-primary);
+    background: rgb(218, 161, 7);
+    color: white;
 }
 
 .btn-secondary {
-    background: var(--action-secondary);
-    color: var(--foreground-secondary);
+    background: rgb(218, 161, 7);
+    color: rgb(218, 161, 7);
     padding: 0.5rem 1rem;
     border: 3px solid var(--foreground-tertiary);
 }
 
 .btn-secondary:hover {
-    border-color: var(--accent);
+    background: rgb(218, 161, 7);
+    color: white;
 }
 
 
