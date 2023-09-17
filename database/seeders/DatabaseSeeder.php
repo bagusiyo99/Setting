@@ -36,27 +36,27 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         
-        Setting::factory(1)->create([
-            'judul' => 'a', 
-            'deskripsi' => 'a', 
-            'visi' => 'a', 
-            'misi' => 'a', 
-            'alamat' => 'a', 
-            'hp' => 'a', 
-        ]);
+        // Setting::factory(1)->create([
+        //     'judul' => 'a', 
+        //     'deskripsi' => 'a', 
+        //     'visi' => 'a', 
+        //     'misi' => 'a', 
+        //     'alamat' => 'a', 
+        //     'hp' => 'a', 
+        // ]);
 
-            Portofolio::factory(1)->create([
-            'judul' => 'a', 
-            'deskripsi' => 'a', 
-        ]);
+        //     Portofolio::factory(1)->create([
+        //     'judul' => 'a', 
+        //     'deskripsi' => 'a', 
+        // ]);
 
 
     }
 
     protected $seeders = [
-    BlogSeeder::class,
-    BannnerSeeder::class,
-    UsersTableSeeder::class,
+    // BlogSeeder::class,
+    // BannnerSeeder::class,
+    // UsersTableSeeder::class,
     // Sebuah seeder lainnya jika ada
 ];
     
