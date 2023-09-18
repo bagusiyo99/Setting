@@ -36,6 +36,33 @@ namespace App\Models{
 
 namespace App\Models{
 /**
+ * App\Models\Barang
+ *
+ * @property int $id
+ * @property string $nama_barang
+ * @property int $jumlah_barang
+ * @property string $harga_barang
+ * @property string|null $gambar
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Transaksi> $transaksis
+ * @property-read int|null $transaksis_count
+ * @method static \Illuminate\Database\Eloquent\Builder|Barang newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Barang newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Barang query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Barang whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Barang whereGambar($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Barang whereHargaBarang($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Barang whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Barang whereJumlahBarang($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Barang whereNamaBarang($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Barang whereUpdatedAt($value)
+ */
+	class Barang extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
  * App\Models\Blog
  *
  * @property int $id
@@ -193,6 +220,29 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Portofolio whereUpdatedAt($value)
  */
 	class Portofolio extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\Transaksi
+ *
+ * @property int $id
+ * @property int $barang_id
+ * @property int $jumlah_terjual
+ * @property string $total_harga
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|Transaksi newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Transaksi newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Transaksi query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Transaksi whereBarangId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Transaksi whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Transaksi whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Transaksi whereJumlahTerjual($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Transaksi whereTotalHarga($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Transaksi whereUpdatedAt($value)
+ */
+	class Transaksi extends \Eloquent {}
 }
 
 namespace App\Models{

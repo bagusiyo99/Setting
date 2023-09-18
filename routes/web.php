@@ -13,12 +13,14 @@ use App\Http\Controllers\admin\AdminKomen;
 
 
 use App\Http\Controllers\admin\AdminBanner;
+use App\Http\Controllers\admin\AdminBarang;
 use App\Http\Controllers\home\HomePemesanan;
 use App\Http\Controllers\home\HomePortofolio;
 use App\Http\Controllers\admin\AdminPemesanan;
 use App\Http\Controllers\home\komenController;
 use App\Http\Controllers\admin\AdminPengaturan;
 use App\Http\Controllers\admin\AdminPortofolio;
+use App\Http\Controllers\admin\AdminTransaksi;
 use App\Http\Controllers\home\HomeBlogController;
 use App\Http\Controllers\admin\BerandaOperatorController;
 use App\Http\Controllers\SettingController;
@@ -125,6 +127,9 @@ Route::prefix('operator')->middleware(['auth', 'auth.operator'])->group(function
     Route::resource('/jasa', AdminJasa::class);
     Route::resource('/banner', AdminBanner::class);
     Route::resource('/blog', AdminBlog::class);
+    Route::resource('/barang', AdminBarang::class);
+    Route::resource('/transaksi', AdminTransaksi::class);
+
     Route::resource('/portofolio', AdminPortofolio::class);
 
 });

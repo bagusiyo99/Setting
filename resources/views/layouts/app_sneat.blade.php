@@ -277,7 +277,19 @@
                         </a>
                     </li>
 
+                    <li class="menu-item {{ \Route::is('barang.*') ? 'active' : '' }}">
+                        <a href="{{ route('barang.index') }}" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-collection"></i>
+                            <div data-i18n="Basic">Data barang</div>
+                        </a>
+                    </li>
 
+                    <li class="menu-item {{ \Route::is('transaksi.*') ? 'active' : '' }}">
+                        <a href="{{ route('transaksi.index') }}" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-collection"></i>
+                            <div data-i18n="Basic">Data transaksi</div>
+                        </a>
+                    </li>
 
 
 
